@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Simple Airbnb</h1>
+
+  <div class="d-flex flex-wrap">
+    <% @flats.each do |flat| %>
+      <div class="card p-2 m-2">
+        <h3><%= link_to flat.name %></h3>
+        <p><%= flat.address %></p>
+        <div class="d-flex p-2">
+          <p><i class="fas fa-users"></i><%= flat.number_of_guests %></p>
+          <p><i class="fas fa-euro-sign"></i></i><%= flat.price_per_night %></p>
+        </div>
+        <%= link_to 'more info', flat_path(flat) %>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
